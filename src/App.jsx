@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import watch from "./assets/watch.png"
 
 function App() {
   const [time, setTime] = useState({
@@ -81,8 +82,8 @@ function App() {
   
   return (
     <div>
-        <h1 className="heading">StopWatch</h1>
-      <div>
+        <h1 className="heading">Online Timer & StopWatch</h1>
+      <div className="timmer-container">
         <input
           disabled={isRunning}
           value={time.hour}
@@ -114,8 +115,9 @@ function App() {
         <button className="btn" onClick={handleStart}>
           {isRunning ? "pause" : "start"}
         </button>
-        <button className="btn" onClick={handleReset}>Reset</button>
+        <button className="btn reset" onClick={handleReset}>Reset</button>
       </div>
+      <img className="watch-img" src={watch} alt="stopwatch-img" />
     </div>
   );
 }

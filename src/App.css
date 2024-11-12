@@ -1,36 +1,5 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+body {
+  background: #2D1339;
 }
 
 .card {
@@ -41,16 +10,84 @@
   color: #888;
 }
 
-.input-area{
-  height: 3rem;
-  width: 3rem;
-  padding: 20px;
-  margin: 20px;
+.heading {
+  height: 200px;
+  font-size: 45px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.btn-container{
-  display: inline-flex;
-gap: 30px;
+@media only screen and (min-width: 600px) {
+  .heading {
+    height: 100px;
+  }
 }
 
+.timmer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.input-area {
+  box-shadow: 3px 3px 3px #E57DD9;
+  text-align: center;
+  height: 90px;
+  width: 70px;
+  font-size: 35px;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .input-area {
+    height: 300px;
+    width: 300px;
+    font-size: 90px;
+    border-radius: 20px;
+  }
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.btn {
+  padding: 20px 40px;
+  border-radius: 40px;
+  background-color: #E57DD9;
+  color: white;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .btn {
+    padding: 10px 20px;
+  }
+}
+
+.reset {
+  background-color: #56435E;
+}
+
+@media only screen and (min-width: 600px) {
+  .watch-img{
+    margin-top: 20px;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 2rem;
+  }
+}
+
+.watch-img {
+  margin-top: 20px;
+  position: absolute;
+  right: 1.5rem;
+}
